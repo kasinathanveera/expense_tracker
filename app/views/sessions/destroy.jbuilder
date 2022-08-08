@@ -1,1 +1,0 @@
-json.message('Logged out successfuly')

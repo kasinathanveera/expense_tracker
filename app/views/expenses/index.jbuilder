@@ -1,1 +1,0 @@
-json.expenses(@user.expenses)
