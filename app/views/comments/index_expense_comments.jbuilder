@@ -1,0 +1,1 @@
+json.comments(@comments, :comment, :user_id, :parent_id)
