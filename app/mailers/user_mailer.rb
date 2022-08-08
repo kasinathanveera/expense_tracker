@@ -8,8 +8,6 @@ class UserMailer < ApplicationMailer
   def report_update
     @user = params[:user]
     @report = params[:report]
-    @total_amount = @report.total_amount
-    @total_approved_amount = @report.total_approved_amount
     mail(to: @user.email, subject: 'Report update')
   end
 

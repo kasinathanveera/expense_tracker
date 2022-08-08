@@ -74,7 +74,7 @@ class ReportsController < ApplicationController
   end
 
   def admin_update_args
-    raise_restricted_action('actions other than processed are restricted') if params[:status] != 'processed'
+    raise_restricted_action('actions other than processed are restricted') if params[:report][:status] != 'processed'
     params.require(:report).permit(:status)
   end
 

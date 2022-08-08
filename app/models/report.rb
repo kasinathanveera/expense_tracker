@@ -22,13 +22,14 @@ class Report < ApplicationRecord
 
   def total_amount
     expenses.inject(0) do |amount, e|
-      amount + e.amount
+      amount += e.amount
     end
   end
 
   def total_approved_amount
     expenses.inject(0) do |amount, e|
-      amount + e.approved_amount
+    amount += e.approved_amount unless e.approved_amount.nil?
+    amount
     end
   end
 
